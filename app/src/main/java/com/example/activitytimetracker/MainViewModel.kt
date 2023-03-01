@@ -1,10 +1,10 @@
 package com.example.activitytimetracker
 
-class MainViewModel(private val mainModel: MainModel) : Observe {
+class MainViewModel(private val mainModel: MainModel,private val secondsToHours: SecondsToHours) : Observe {
 
 
     fun startTrackingTime() {
-        callback.post(mainModel.time().toString())
+        callback.post(secondsToHours.map(mainModel.time()))
         mainModel.startTracking()
     }
 
