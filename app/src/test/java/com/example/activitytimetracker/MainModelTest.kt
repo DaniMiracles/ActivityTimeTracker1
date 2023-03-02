@@ -10,7 +10,7 @@ class MainModelTest {
     fun test() {
         val dataSource = FakeDataSource()
         val fakeNow = FakeNow()
-        val model = MainModel(dataSource,fakeNow)
+        val model = MainModel.Base(dataSource,fakeNow)
 
         model.startTracking()
         fakeNow.time = 10_000

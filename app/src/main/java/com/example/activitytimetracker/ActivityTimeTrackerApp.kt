@@ -10,6 +10,6 @@ class ActivityTimeTrackerApp : Application() {
     override fun onCreate() {
         super.onCreate()
         Log.d("Miracles", "onCreateViewModel")
-        viewModel = MainViewModel(MainModel(DataSource.Base(this), Now.Base()),SecondsToHours.Base())
+        viewModel = MainViewModel(MainModel.Base(DataSource.Base(this), Now.Base()),SecondsToHours.Base())
     }
 }
